@@ -7,7 +7,7 @@ exports.obrigatorio = (req, res, next)=>{
      const tokenHeader = req.headers.authorization.split(' ')[1];
      const decode = jwt.verify(tokenHeader, process.env.JWT_KEY);
 
-     // Antes o token era envia via form-data com body, mas isso não é uma
+     // Antes o token era enviado via form-data com body, mas isso não é uma
      // boa prática, portanto o mesmo será enviado na via headers
      // const decode = jwt.verify(req.body.token, process.env.JWT_KEY);
 
